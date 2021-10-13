@@ -1,18 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { cx, css } from "@emotion/core";
 import styled from "@emotion/styled";
-import { ObjectInspector } from "react-inspector";
-import { MuiThemeProvider, createMuiTheme } from "@mui/styles";
+import { createTheme } from "@mui/styles";
 import MaterialColorPicker from "@usulpro/color-picker";
-
-const sortObjectKeys = (a, b) => {
-  if (a === "themeName") return -2;
-  if (b === "themeName") return 2;
-  if (a === "palette") return -1;
-  if (b === "palette") return 1;
-  return a.charCodeAt(0) - b.charCodeAt(0);
-};
 
 const PaletteHolder = styled("div")`
   height: 1px;
@@ -78,7 +68,7 @@ export default class Palette extends React.Component {
     this.setState(
       {
         path,
-        editColor: createMuiTheme({ palette }).palette[path[0]][path[1]],
+        editColor: createTheme({ palette }).palette[path[0]][path[1]],
         isPickerOpen,
       },
       () => {
@@ -190,7 +180,7 @@ export default class Palette extends React.Component {
   };
 
   render() {
-    const { palette } = createMuiTheme({ palette: this.state.palette });
+    const { palette } = createTheme({ palette: this.state.palette });
     const colorSet = (name) =>
       this.renderColorSet(
         palette[name],

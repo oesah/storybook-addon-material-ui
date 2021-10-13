@@ -1,9 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { cx, css } from "@emotion/core";
 import styled from "@emotion/styled";
 import { ObjectInspector } from "react-inspector";
-import { MuiThemeProvider, createMuiTheme } from "@mui/styles";
+import { createTheme } from "@mui/styles";
 
 const sortObjectKeys = (a, b) => {
   if (a === "themeName") return -2;
@@ -28,7 +26,7 @@ export default ({ theme }) => (
       expandLevel={1}
       expandPaths="$.palette"
       sortObjectKeys={sortObjectKeys}
-      data={createMuiTheme(theme)}
+      data={createTheme(theme)}
     />
   </Holder>
 );

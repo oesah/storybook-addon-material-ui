@@ -1,14 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { MuiThemeProvider, createMuiTheme } from '@mui/styles';
-import createPalette from '@mui/styles/createPalette';
-import purple from '@mui/colors/purple';
-import green from '@mui/colors/green';
-import red from '@mui/colors/red';
+import { createTheme } from '@mui/styles';
+import { ThemeProvider } from "@mui/material";
 
-import { EVENT_ID_DATA, EVENT_ID_BACK } from '../config';
-import { lightTheme } from '../.themes';
 // future: [x] remove ThemeToolbar
 // import ThemeSideBar from '../components/ThemeSideBar';
 // const stringify = require('json-stringify-safe');
@@ -32,8 +27,8 @@ export default class MuiTheme extends React.Component {
     this.state = props.initState;
     this.state.themesAppliedList = props.themesAppliedListInit;
     this.state.currentTheme = {};
-    // this.state.muiTheme = createMuiTheme(props.themesAppliedListInit[props.initState.themeInd]); // Not working yet
-    this.state.muiTheme = createMuiTheme();
+    // this.state.muiTheme = createTheme(props.themesAppliedListInit[props.initState.themeInd]); // Not working yet
+    this.state.muiTheme = createTheme();
     this.state.isMount = false;
     this.isChannelData = false;
     this.UpdateList = {};
@@ -92,8 +87,8 @@ export default class MuiTheme extends React.Component {
   changeTheme(ind) {
     this.needComponentUpdate('ThemeSideBar');
     this.setState({
-      // muiTheme: createMuiTheme(this.state.themesAppliedList[ind]),
-      muiTheme: createMuiTheme(),
+      // muiTheme: createTheme(this.state.themesAppliedList[ind]),
+      muiTheme: createTheme(),
       themeInd: ind
     });
   }
@@ -132,12 +127,12 @@ export default class MuiTheme extends React.Component {
   }
 
   render() {
-    const theme = createMuiTheme(this.state.currentTheme);
+    const theme = createTheme(this.state.currentTheme);
 
     return (
-      <MuiThemeProvider theme={theme}>
+      <ThemeProvider theme={theme}>
         <div>{this.props.story}</div>
-      </MuiThemeProvider>
+      </ThemeProvider>
     );
   }
 }

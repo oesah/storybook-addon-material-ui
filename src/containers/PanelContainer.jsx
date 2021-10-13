@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { MuiThemeProvider, createMuiTheme } from '@mui/styles';
+import { createTheme } from '@mui/styles';
+import { ThemeProvider } from "@mui/material";
 import * as beauti from 'js-beautify';
 
 import AddonPanel from '../components/AddonPanel';
@@ -15,7 +16,7 @@ import {
 const { document, window } = global;
 const logger = console;
 
-const lightBaseTheme = createMuiTheme();
+const lightBaseTheme = createTheme();
 
 const PROGRESS_STATUS = {
   'button-clone': 'soon', // todo: [] button_clone
@@ -235,7 +236,7 @@ ${window.btoa(this.getCurrentTheme(4))}`;
 
   render() {
     return this.state.isReady ? (
-      <MuiThemeProvider theme={this.muiTheme}>
+      <ThemeProvider theme={this.muiTheme}>
         <AddonPanel
           themesNameList={this.state.themesNameList}
           defautThemeInd={this.state.themeInd}
@@ -254,7 +255,7 @@ ${window.btoa(this.getCurrentTheme(4))}`;
           onCloneTheme={this.onCloneTheme}
           onCleanTheme={this.onCleanTheme}
         />
-      </MuiThemeProvider>
+      </ThemeProvider>
     ) : (
       <div
         style={{

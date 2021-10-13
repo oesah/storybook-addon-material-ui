@@ -1,4 +1,4 @@
-import { createMuiTheme } from "@mui/styles";
+import { createTheme } from "@mui/styles";
 import red from "@material-ui/core/colors/red";
 import yellow from "@material-ui/core/colors/yellow";
 
@@ -17,4 +17,4 @@ export const overridings = {
   themeName: "Yellow and Red Theme",
 };
 
-export default createMuiTheme(overridings);
+export default createTheme(overridings);

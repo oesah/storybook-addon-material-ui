@@ -1,4 +1,4 @@
-import { createMuiTheme } from "@mui/styles";
+import { createTheme } from "@mui/styles";
 import green from "@material-ui/core/colors/green";
 import purple from "@material-ui/core/colors/purple";
 
@@ -28,4 +28,4 @@ export const overridings = {
   themeName: "Custom Dark Theme",
 };
 
-export default createMuiTheme(overridings);
+export default createTheme(overridings);
