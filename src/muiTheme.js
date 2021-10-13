@@ -1,33 +1,33 @@
-import React from 'react';
-import { createMuiTheme } from '@material-ui/core/styles';
+import React from "react";
+import { createMuiTheme } from "@mui/styles";
 
-import { EVENT_ID_INIT, EVENT_ID_DATA, EVENT_ID_BACK } from './config';
-import MuiDecorator from './UI/MuiDecorator';
-import { createStore } from './adk/decorator';
+import { EVENT_ID_INIT, EVENT_ID_DATA, EVENT_ID_BACK } from "./config";
+import MuiDecorator from "./UI/MuiDecorator";
+import { createStore } from "./adk/decorator";
 
 const lightBaseTheme = createMuiTheme({
   typography: {
-    useNextVariants: true
-  }
+    useNextVariants: true,
+  },
 });
 const darkBaseTheme = createMuiTheme({
   palette: {
-    type: 'dark'
+    type: "dark",
   },
   typography: {
-    useNextVariants: true
-  }
+    useNextVariants: true,
+  },
 });
 
-lightBaseTheme.themeName = 'Light Theme';
-darkBaseTheme.themeName = 'Dark Theme';
+lightBaseTheme.themeName = "Light Theme";
+darkBaseTheme.themeName = "Dark Theme";
 
 export function muiTheme(themes) {
   const store = createStore(
     EVENT_ID_INIT,
     EVENT_ID_DATA,
     EVENT_ID_BACK,
-    'iframe'
+    "iframe"
   );
 
   let themesInitList = [lightBaseTheme, darkBaseTheme];
@@ -35,7 +35,7 @@ export function muiTheme(themes) {
     if (Array.isArray(themes)) {
       themesInitList = themes;
       themesInitList.forEach((val, ind) => {
-        if (typeof val === 'string') {
+        if (typeof val === "string") {
           /* note: unsupported names goes as lightBaseTheme
           if (val === lightBaseTheme.themeName) {
               themesInitList[ind] = lightBaseTheme;
@@ -57,7 +57,7 @@ export function muiTheme(themes) {
     store.sendInit({ themes: themesInitList, themeInd: 0 })
   );
 
-  return story => {
+  return (story) => {
     const storyItem = story();
     return (
       <MuiDecorator

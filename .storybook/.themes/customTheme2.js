@@ -1,6 +1,6 @@
-import { createMuiTheme } from '@material-ui/core/styles';
-import green from '@material-ui/core/colors/green';
-import purple from '@material-ui/core/colors/purple';
+import { createMuiTheme } from "@mui/styles";
+import green from "@material-ui/core/colors/green";
+import purple from "@material-ui/core/colors/purple";
 
 const primaryGreen = green[500];
 const accentGreen = green.A200;
@@ -15,17 +15,17 @@ export const overridings = {
       light: accentPurple,
       main: primaryPurple,
       dark: darkPurple,
-      contrastText: '#fff'
+      contrastText: "#fff",
     },
-    type: 'dark',
+    type: "dark",
     secondary: {
       light: accentGreen,
       main: primaryGreen,
       dark: darkGreen,
-      contrastText: '#fff'
-    }
+      contrastText: "#fff",
+    },
   },
-  themeName: 'Custom Dark Theme'
+  themeName: "Custom Dark Theme",
 };
 
 export default createMuiTheme(overridings);

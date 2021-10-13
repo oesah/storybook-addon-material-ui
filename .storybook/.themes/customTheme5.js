@@ -1,21 +1,20 @@
-import { createMuiTheme } from '@material-ui/core/styles';
-import blue from '@material-ui/core/colors/blue';
-import yellow from '@material-ui/core/colors/yellow';
-
+import { createMuiTheme } from "@mui/styles";
+import blue from "@material-ui/core/colors/blue";
+import yellow from "@material-ui/core/colors/yellow";
 
 export const overridings = {
   palette: {
     primary: {
       main: yellow[500],
-      contrastText: '#000'
+      contrastText: "#000",
     },
     secondary: {
       main: blue[500],
-      contrastText: '#fff'
+      contrastText: "#fff",
     },
-    type: 'dark'
+    type: "dark",
   },
-  themeName: 'Yellow and Blue Theme'
+  themeName: "Yellow and Blue Theme",
 };
 
 export default createMuiTheme(overridings);

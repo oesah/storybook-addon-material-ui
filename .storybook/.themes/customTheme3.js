@@ -1,7 +1,7 @@
-import { createMuiTheme } from '@material-ui/core/styles';
-import green from '@material-ui/core/colors/green';
-import purple from '@material-ui/core/colors/purple';
-import blue from '@material-ui/core/colors/blue';
+import { createMuiTheme } from "@mui/styles";
+import green from "@material-ui/core/colors/green";
+import purple from "@material-ui/core/colors/purple";
+import blue from "@material-ui/core/colors/blue";
 
 const darkGreen = green[900];
 const accentPurple = purple.A200;
@@ -17,9 +17,9 @@ export const overridings = {
     secondary: {
       main: darkGreen,
     },
-    type: 'dark'
+    type: "dark",
   },
-  themeName: 'Pale Blue Theme'
+  themeName: "Pale Blue Theme",
 };
 
 export default createMuiTheme(overridings);

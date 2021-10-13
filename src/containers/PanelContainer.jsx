@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { MuiThemeProvider, createMuiTheme } from '@mui/styles';
 import * as beauti from 'js-beautify';
 
 import AddonPanel from '../components/AddonPanel';

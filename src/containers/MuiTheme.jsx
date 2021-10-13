@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import createPalette from '@material-ui/core/styles/createPalette';
-import purple from '@material-ui/core/colors/purple';
-import green from '@material-ui/core/colors/green';
-import red from '@material-ui/core/colors/red';
+import { MuiThemeProvider, createMuiTheme } from '@mui/styles';
+import createPalette from '@mui/styles/createPalette';
+import purple from '@mui/colors/purple';
+import green from '@mui/colors/green';
+import red from '@mui/colors/red';
 
 import { EVENT_ID_DATA, EVENT_ID_BACK } from '../config';
 import { lightTheme } from '../.themes';

@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import React from "react";
+import PropTypes from "prop-types";
+import { MuiThemeProvider, createMuiTheme } from "@mui/styles";
 
-import withChannel from '../adk/WithChannel';
-import { EVENT_ID_INIT, EVENT_ID_DATA, EVENT_ID_BACK } from '../config';
+import withChannel from "../adk/WithChannel";
+import { EVENT_ID_INIT, EVENT_ID_DATA, EVENT_ID_BACK } from "../config";
 
-const currentTheme = data => {
+const currentTheme = (data) => {
   try {
     const theme = data.themes[data.themeInd];
     return createMuiTheme(theme);

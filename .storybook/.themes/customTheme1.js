@@ -1,9 +1,9 @@
-import { createMuiTheme } from '@material-ui/core/styles';
-import green from '@material-ui/core/colors/green';
-import purple from '@material-ui/core/colors/purple';
-import blue from '@material-ui/core/colors/blue';
-import red from '@material-ui/core/colors/red';
-import yellow from '@material-ui/core/colors/yellow';
+import { createMuiTheme } from "@mui/styles";
+import green from "@material-ui/core/colors/green";
+import purple from "@material-ui/core/colors/purple";
+import blue from "@material-ui/core/colors/blue";
+import red from "@material-ui/core/colors/red";
+import yellow from "@material-ui/core/colors/yellow";
 
 const primaryGreen = green[500];
 const accentGreen = green.A200;
@@ -18,16 +18,16 @@ export const overridings = {
       light: accentGreen,
       main: primaryGreen,
       dark: darkGreen,
-      contrastText: '#fff'
+      contrastText: "#fff",
     },
     secondary: {
       light: accentPurple,
       main: primaryPurple,
       dark: darkPurple,
-      contrastText: '#fff'
-    }
+      contrastText: "#fff",
+    },
   },
-  themeName: 'Custom Light Theme'
+  themeName: "Custom Light Theme",
 };
 
 export default createMuiTheme(overridings);
