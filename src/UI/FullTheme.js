@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { ObjectInspector } from "react-inspector";
-import { createTheme } from "@mui/styles";
+import { createTheme } from "@mui/material/styles";
 
 const sortObjectKeys = (a, b) => {
   if (a === "themeName") return -2;

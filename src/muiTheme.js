@@ -1,5 +1,5 @@
 import React from "react";
-import { createTheme } from "@mui/styles";
+import { createTheme } from "@mui/material/styles";
 
 import { EVENT_ID_INIT, EVENT_ID_DATA, EVENT_ID_BACK } from "./config";
 import MuiDecorator from "./UI/MuiDecorator";

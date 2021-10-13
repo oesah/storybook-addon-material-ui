@@ -1,4 +1,4 @@
-import { createTheme } from "@mui/styles";
+import { createTheme } from "@mui/material/styles";
 import red from "@material-ui/core/colors/red";
 import yellow from "@material-ui/core/colors/yellow";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "@emotion/styled";
-import { createTheme } from "@mui/styles";
+import { createTheme } from "@mui/material/styles";
 import MaterialColorPicker from "@usulpro/color-picker";
 
 const PaletteHolder = styled("div")`
